@@ -1,15 +1,14 @@
-# 🧠 Reflexión sobre Git Worktree
+Reflexion sobre Git Worktree
 
-### 1. Ventajas de Worktree
-Frente a cambiar de rama en el mismo directorio (`git checkout`), la principal ventaja es **no tener que lidiar con archivos modificados o sin commitear** (evitamos el uso constante de `git stash`). Puedes tener un servidor corriendo en una rama mientras editas otra en un directorio distinto.
+1. Ventajas de Worktree
+La principal ventaja que le veo frente a cambiar de rama normal es que no tengo que andar guardando los cambios con stash si tengo algo a medias. Simplemente abro otra carpeta y listo. 
+Comparado con clonar el repo varias veces, lo bueno es que no ocupa tanto espacio porque comparten la carpeta .git, y si descargo algo en una rama ya lo tengo en todas.
 
-Frente a clonar el repositorio varias veces, la ventaja es el **ahorro de espacio y la sincronización**. Todos los worktrees comparten el mismo directorio `.git`, por lo que si haces un `fetch` en uno, los objetos están disponibles para todos inmediatamente, sin duplicar el peso del historial.
+2. Situaciones reales
+- Una situacion seria si estoy programando una cosa y de repente me piden revisar un bug en otra rama. En vez de parar lo que estoy haciendo, abro un worktree en otra carpeta, arreglo el bug y sigo con lo mio.
+- Otra seria para probar cosas. Si quiero ver si algo funciona en una rama distinta sin romper mi entorno actual, un worktree me permite tener las dos cosas abiertas a la vez.
 
-### 2. Situaciones reales de uso
-1. **Revisión de Pull Requests (PRs):** Estás en medio de una funcionalidad compleja y un compañero te pide que revises su código. En lugar de guardar tus cambios y cambiar de rama, abres un worktree en una carpeta temporal, revisas el código, lo pruebas y luego lo borras, sin tocar tu entorno de desarrollo actual.
-2. **Hotfixes urgentes:** Si surge un error crítico en producción (`main`) mientras trabajas en una rama de larga duración, puedes crear un worktree de `main`, aplicar el fix, subirlo y volver a tu tarea original de forma instantánea.
-
-### 3. Buenas prácticas
-- **Nomenclatura:** Usar un prefijo claro para los directorios de worktree (como `wt-` o `.worktrees/`) para que sean fáciles de identificar y excluir en el `.gitignore` si fuera necesario.
-- **Limpieza:** Ejecutar `git worktree list` periódicamente para ver qué carpetas siguen activas y usar `git worktree prune` para limpiar referencias si hemos borrado carpetas a mano.
-- **Ubicación:** Crear los worktrees fuera del directorio principal (en el nivel superior) para evitar anidamientos accidentales.
+3. Buenas practicas
+- Yo pondria nombres claros a las carpetas, como wt-nombre-rama, para saber que son temporales.
+- Tambien esta bien sacarlas fuera de la carpeta principal del proyecto para no liarse.
+- Y de vez en cuando usar git worktree prune por si he borrado alguna carpeta a mano y git todavia se cree que esta ahi.

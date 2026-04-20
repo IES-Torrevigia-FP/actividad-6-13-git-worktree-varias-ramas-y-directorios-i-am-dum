@@ -1,6 +1,11 @@
 /home/andr/Documents/dev/actividad-6-13-git-worktree-varias-ramas-y-directorios-i-am-dum c56f7e2 [main]
 /home/andr/Documents/dev/wt-feature-a                                                    8d2097e [feature-a]
-\nEsquema de cambios:\n- Directorio principal: README actualizado con 'Cambio independiente en main' en rama main.\n- Directorio wt-feature-a: README actualizado con 'Detalle técnico' en rama feature-a.
+
+Cambios hechos:
+- En el principal: actualice el README con algo en main.
+- En wt-feature-a: actualice el README con detalles de la funcionalidad A.
+
+Log de commits:
 8d2097e Amplía detalles de funcionalidad A
 c56f7e2 Actualiza README en main
 e8d7e17 Añade funcionalidad A

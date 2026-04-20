@@ -1,21 +1,17 @@
-# 🧩 Actividad 6.13 – Git Worktree
+Actividad 6.13 - Git Worktree
 
-Este proyecto es una práctica sobre el uso de `git worktree` para gestionar múltiples directorios de trabajo vinculados a un mismo repositorio.
+En este proyecto he practicado como usar git worktree para manejar varios directorios de trabajo a la vez sin tener que andar cambiando de rama todo el rato en la misma carpeta.
 
-## 🚀 Lo que he aprendido
-- Crear worktrees para ramas existentes.
-- Crear nuevas ramas directamente al añadir un worktree con `-b`.
-- Listar y gestionar los worktrees activos.
-- Trabajar en paralelo en diferentes ramas sin necesidad de hacer `git stash` o cambiar de contexto en el mismo directorio.
-- Eliminar y limpiar worktrees con `remove` y `prune`.
+Lo que he hecho:
+- Crear worktrees para ramas que ya existian.
+- Usar git worktree add -b para crear ramas nuevas sobre la marcha.
+- Ver la lista de worktrees activos.
+- Trabajar en varias ramas a la vez sin tener que hacer stash.
+- Borrar y limpiar los worktrees con remove y prune.
 
-## 📁 Estructura de la Actividad
-El repositorio contiene varios archivos de "checkpoint" que documentan el progreso:
-- `cp1-historial-worktree.txt`: Estado inicial del repo.
-- `cp2-worktree-list.txt`: Primera creación de un worktree.
-- `cp3-trabajo-paralelo.txt`: Evidencia de commits en paralelo.
-- `cp4-feature-b-worktree.txt`: Creación de rama con `-b`.
-- `cp5-remove-prune.txt`: Limpieza final.
-
----
-*Realizado como parte del curso de Git avanzado.*
+Archivos de la actividad:
+- cp1-historial-worktree.txt: el historial al empezar.
+- cp2-worktree-list.txt: cuando cree el primer worktree.
+- cp3-trabajo-paralelo.txt: prueba de que hice commits en distintas carpetas.
+- cp4-feature-b-worktree.txt: como cree la rama feature-b.
+- cp5-remove-prune.txt: limpieza final de los directorios.

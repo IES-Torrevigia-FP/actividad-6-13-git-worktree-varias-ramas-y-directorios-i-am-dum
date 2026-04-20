@@ -1,7 +1,12 @@
+Lista antes de borrar:
 /home/andr/Documents/dev/actividad-6-13-git-worktree-varias-ramas-y-directorios-i-am-dum c56f7e2 [main]
 /home/andr/Documents/dev/wt-feature-a                                                    8d2097e [feature-a]
 /home/andr/Documents/dev/wt-feature-b                                                    e95c39d [feature-b]
-\nDespués de eliminar wt-feature-a:
+
+Despues de hacer git worktree remove ../wt-feature-a:
 /home/andr/Documents/dev/actividad-6-13-git-worktree-varias-ramas-y-directorios-i-am-dum c56f7e2 [main]
 /home/andr/Documents/dev/wt-feature-b                                                    e95c39d [feature-b]
-\nDiferencia entre remove y prune:\n- 'remove' elimina el directorio del worktree y su entrada en el repositorio principal.\n- 'prune' limpia administrativamente los archivos del repositorio que apuntan a worktrees cuyos directorios han sido borrados manualmente o ya no existen.
+
+Diferencia entre remove y prune:
+- remove sirve para quitar un worktree bien, borrando la carpeta y avisando a git.
+- prune es mas para limpiar cuando has borrado la carpeta a mano y git se ha quedado con la referencia "colgada".
