@@ -1,0 +1,7 @@
+e8d7e17 Añade funcionalidad A
+d039c57 Commit inicial en main
+e815a86 tarea
+49b1e90 add deadline
+deb1ad7 Initial commit
+  feature-a
+* main

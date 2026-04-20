@@ -1,0 +1,7 @@
+/home/andr/Documents/dev/actividad-6-13-git-worktree-varias-ramas-y-directorios-i-am-dum c56f7e2 [main]
+/home/andr/Documents/dev/wt-feature-a                                                    8d2097e [feature-a]
+/home/andr/Documents/dev/wt-feature-b                                                    e95c39d [feature-b]
+\nDespués de eliminar wt-feature-a:
+/home/andr/Documents/dev/actividad-6-13-git-worktree-varias-ramas-y-directorios-i-am-dum c56f7e2 [main]
+/home/andr/Documents/dev/wt-feature-b                                                    e95c39d [feature-b]
+\nDiferencia entre remove y prune:\n- 'remove' elimina el directorio del worktree y su entrada en el repositorio principal.\n- 'prune' limpia administrativamente los archivos del repositorio que apuntan a worktrees cuyos directorios han sido borrados manualmente o ya no existen.
